@@ -7,7 +7,8 @@
 import copy
 from fractions import Fraction
 
-c_b = {}      # We create this dictionary to keep track of our cost coefficients.
+
+c_b = {}
 class SimplexSolver():
     def __init__(self):
         self.A = []
@@ -51,7 +52,7 @@ class SimplexSolver():
         solution = self.get_current_solution()
 
         self._print_tableau()
-        print("Current solution: ", solution)
+        #print("Current solution: ", solution)
         return solution
 
     def set_simplex_input(self, A, b, c):
@@ -298,4 +299,10 @@ if __name__ == '__main__':
     for id,val in enumerate(A):
         c_b["s_" + str(id + 1)] = 0;
 
-    SimplexSolver().run_simplex(A, b, c, prob=p)
+    LPSolver = SimplexSolver()
+    result = LPSolver.run_simplex(A, b, c, prob=p)
+
+    print("Solutuion found: ");
+    for i, var in enumerate(result):
+        print(var, " = ", result[var]);
+

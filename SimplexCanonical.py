@@ -1,8 +1,8 @@
-/*
+'''
     Credit: The original authot of this is github.com/MichaelStott.
     I branched his code, and created a heavily modified, clutterfree version
     My version is optimized to run on modern version of Python, and more suitable for our MAT485 Course because it gives us the Simplex Tableau instead of the solution.
-*/
+'''
 
 import copy
 from fractions import Fraction
